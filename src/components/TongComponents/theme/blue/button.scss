@@ -1,0 +1,103 @@
+@import "./vars.scss";
+
+// 白底按钮
+.button-white,.el-button--default{
+    display:inline-block;
+    color: $white_color;
+    background-color: $white_bg;
+    cursor: pointer;
+    border: $white_bd;
+    // height: $height;
+    border-radius: $border_radius;
+
+    span{
+        color: $white_color;
+    }
+
+    &:focus{
+        color: $white_focus_color;
+        background-color: $white_focus_bg;
+
+        span{
+            color: $white_focus_color;
+        }
+    }
+
+    &:hover{
+        color: $white_hover_color;
+        background-color: $white_hover_bg;
+        border: $white_hover_bd;
+
+        span{
+            color: $white_hover_color;
+        }
+    }
+
+    &:active{
+        color: $white_active_color;
+        background-color: $white_active_bg;
+
+        span{
+            color: $white_active_color;
+        }
+    }
+
+    &.disabled,&.is-disabled{
+        background-color: $white_disabled_bg;
+        color: $white_disabled_color;
+        border: $white_disabled_bd;
+        cursor: no-drop;
+        pointer-events:none;
+
+        span{
+            color: $white_disabled_color;
+        }
+    }
+}
+
+// 蓝底按钮
+.button-blue,.el-button--primary{
+    display:inline-block;
+    color: $blue_color;
+    background-color: $blue_bg;
+    cursor: pointer;
+    border: none;
+    // height: $height;
+    border-radius: $border_radius;
+
+    span{
+        color: $blue_color;
+    }
+
+    &:focus{
+        background-color: $blue_focus_bg;
+        span{
+            color:#fff;
+        }
+    }
+
+    &:hover{
+        background-color: $blue_hover_bg;
+        span{
+            color:#fff;
+        }
+    }
+
+    &:active{
+        background-color: $blue_active_bg;
+        span{
+            color:#fff;
+        }
+    }
+
+    &.disabled,&.is-disabled{
+        border: none;
+        background-color: $blue_disabled_bg;        
+        cursor: no-drop;
+        pointer-events:none;
+
+        span{
+            color:#fff;
+        }
+    }
+}

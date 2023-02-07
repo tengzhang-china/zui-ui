@@ -1,0 +1,137 @@
+@mixin title {
+    margin: 0;
+    line-height: 30px;
+    color:#666;
+    border-bottom: 1px solid #DCDFE6;
+    margin-bottom: 5px;
+    text-indent: 5px;  
+}
+
+.tong-datasource{
+
+    &-search{
+
+        section{
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            
+            .tong-select{
+                flex-grow: 1;
+            }
+            .el-input__inner{
+                background-color: #f9f9f9;
+                border-radius: 2px;
+            }
+
+            >i{
+                font-size: 14px;
+                padding: 4px;
+                margin-left: 5px;
+                color: #636262;
+                background-color: #f9f9f9;
+                border: 1px solid #DCDFE6;
+                border-radius: 2px;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.tong-data-source{
+    display: flex;
+    width: 100%;
+
+    &-left{
+        width: 240px;
+        .tong-select{
+            width: 100%;
+        }
+
+        >.search{
+            margin-bottom: 5px;
+        }
+    }
+
+    &-list{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #DCDFE6;
+        >.title{
+            @include title;
+        }
+
+        >.tong-input{
+            margin: 0 5px 5px;
+            width: calc(100% - 10px)!important;
+        }
+
+        >.tree-box{
+            height: 0;
+            flex-grow: 1;
+            background-color: #f9f9f9;
+        }
+    }
+
+    &-right{
+        width: 0;
+        height: 100%;
+        flex-grow: 1;
+        margin-left: 10px;
+        border: 1px solid #DCDFE6;
+        >.selected{
+            height: 100%;
+            color: #636262;
+            
+            >div{
+                height: calc(100% - 31px);
+                overflow-y: auto;
+            }
+            >.title{
+                @include title;
+                margin-bottom: 0;
+            }
+            
+            .item{
+                background-color: #fafafa;
+                padding: 0 5px 5px;
+                margin-bottom: 5px;
+
+                &:nth-last-of-type(1){
+                    margin-bottom: 0;
+                }
+            }
+            .item-title{
+                margin: 0;
+                line-height: 28px;
+                display: flex;
+                
+                .count{
+                    color: #3A8CE2;
+                    margin: 0 5px;
+                }
+                .cursor{
+                    margin-left: auto;
+                }
+            }
+            .item-content{
+                line-height: 24px;
+                display: flex;
+                flex-wrap: wrap;
+
+                >span{
+                    background-color: #fff;
+                    border: 1px solid #DCDFE6;
+                    max-width: 150px;
+                    padding: 0 5px;
+                    margin: 0 5px 5px 0;
+                    display: flex;
+                }
+                i{
+                    line-height: 24px;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+}

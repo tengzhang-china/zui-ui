@@ -1,0 +1,34 @@
+.tong-bread-dialog{
+    .bread-crumb{
+        display: flex;
+        span{
+            font-size: 12px;
+        }
+    }
+    .el-breadcrumb{
+        padding-bottom: 10px;
+
+        &__item{
+            font-size: 12px;
+            .el-breadcrumb__inner{
+                cursor: pointer;
+                color: inherit;
+            }
+            .el-breadcrumb__inner:hover{
+                color: inherit;
+            }
+
+            &:nth-last-of-type(1){
+                .el-breadcrumb__inner{
+                    color: #333
+                }
+            }
+        }
+    }
+
+    .dialog-footer{
+        .el-icon-loading{
+            vertical-align: middle;
+        }
+    }
+}

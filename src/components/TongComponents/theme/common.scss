@@ -1,0 +1,56 @@
+.white-space {
+    overflow: hidden; //超出的文本隐藏
+    text-overflow: ellipsis; //溢出用省略号显示
+    white-space: nowrap; //溢出不换行
+}
+
+.cursor {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:active {
+        opacity: .8;
+    }
+}
+
+.cursor-move{
+    cursor: move;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* 修改滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;    
+}
+
+::-webkit-scrollbar:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}

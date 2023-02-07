@@ -1,0 +1,32 @@
+// global mixin css
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar-track-piece {
+    background: #f4f4f5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(144,147,153,.3);
+    border-radius: 0;
+  }
+}
+

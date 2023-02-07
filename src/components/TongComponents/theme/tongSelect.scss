@@ -1,0 +1,61 @@
+.tong-select{
+    display: inline-block;
+    > div {
+        width: 100%;
+    }
+    .el-select__tags{
+        .el-tag{
+            height: 20px;
+            line-height: 20px;
+            border: none;
+            border-radius: 2px;
+            &:hover {
+                background: #D9EAF4;
+                color: #3A8CE2;
+                .el-tag__close.el-icon-close {
+                    color: #3A8CE2;
+                }
+            }
+        }
+        .el-select__tags-text{
+            display: inline-block;
+            max-width: 80px;
+            overflow: hidden;
+        }
+        .el-tag__close.el-icon-close {
+            background-color: transparent;
+            right: -5px;
+            top: -5px;
+        }
+    }
+
+    .el-input__inner[style="height: 40px;"] {
+        height: 30px !important;
+    }
+}
+
+.tong-select_tong-tree {
+    .el-tree__empty-block {
+        min-height: 24px;
+    }
+    .el-tree {
+        background: #fff;
+    }
+}
+
+.el-select-dropdown {
+    border-radius: 2px;
+    border: 1px solid #E6EBF5;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+    .el-select-dropdown__list {
+        padding: 2px 1px;
+        .el-select-dropdown__item {
+            padding: 0 10px
+        }
+    }
+}
+
+.maxHeight-300{
+    max-height: 300px;
+    overflow-y: auto;
+}

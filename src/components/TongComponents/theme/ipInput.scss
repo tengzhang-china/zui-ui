@@ -1,0 +1,40 @@
+.tong-ip-input{
+    display: flex;
+    width: 192px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #DBDADF;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    .el-input{
+        width: 35px;
+        height: 28px;
+        flex-grow: 1;
+        line-height: 28px;
+        margin-right: 20px;
+        position: relative;
+
+
+        .el-input__inner{
+            height: 28px;
+            line-height: 28px;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            text-align: center;
+        }
+
+        &:not(:last-child)::after{
+            content: ".";
+            height: 0;
+            position: absolute;
+            right: -10px;
+            top: -4px;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

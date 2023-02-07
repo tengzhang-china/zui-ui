@@ -1,0 +1,65 @@
+@import "./normalColor.scss";
+
+.tong-dom-message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 48px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: all linear .3s;
+    display: flex;
+    align-items: center;
+
+    i {
+        font-size: 16px;
+    }
+    span{
+        font-size: 14px;
+        flex-grow: 1;
+        margin: 0 10px;
+        
+        overflow: hidden; //超出的文本隐藏
+        text-overflow: ellipsis; //溢出用省略号显示
+        white-space: nowrap; //溢出不换行
+    }
+    .el-icon-close{
+        float: right;
+        cursor: pointer;
+        margin-right: 0;
+        opacity: .8;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+.tong-dom-message-success {
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+    i,span {
+        color: $successColor;
+    }
+}
+
+.tong-dom-message-warning {
+    background-color: #fdf6ec;
+    border-color: #faecd8;
+    i,span {
+        color: $warningColor;
+    }
+}
+
+.tong-dom-message-error {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    i,span {
+        color: $errorColor;
+    }
+}
+
+.tong-message{
+    .el-message__content{
+        line-height: 18px;
+    }
+}

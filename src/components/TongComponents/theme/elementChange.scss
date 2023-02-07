@@ -1,0 +1,28 @@
+/* 修改tooltips的样式 */
+.el-tooltip__popper[x-placement="top"]{
+	line-height: 25px;
+	padding: 0px 5px;
+    background-color: rgba(48, 49, 51, .82)!important;
+    
+    .popper__arrow{
+        opacity: .82!important;
+    }
+}
+
+/* 修改日期时间选择器的样式 */
+.el-date-range-picker {
+    .el-picker-panel__content{
+        padding: 10px;
+
+        .el-date-range-picker__header div{
+            font-size: 14px;
+        }
+    }
+
+    .el-date-range-picker__time-header{
+        .el-input--small .el-input__inner{
+            height: 26px;
+            line-height: 26px;
+        }
+    }
+}

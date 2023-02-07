@@ -1,0 +1,160 @@
+.tong-form {
+    &-column{
+        flex-direction: column;
+    }
+    &-row{
+        flex-direction: row;
+    }
+    .el-form {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+
+        .el-form-item {
+            margin-bottom: 6px;
+            position: relative;
+        }
+        .el-form-item__label {
+            line-height: 30px;
+            padding: 0 12px 0 0;
+        }
+        .el-form-item__content {
+            font-size: 12px;
+            line-height: 30px;
+            display: flex;
+
+            >span{
+                display: inline-block;
+                max-width: 100%;
+                word-break: break-all;
+                line-height: 20px;
+                padding: 5px 0;
+            }
+
+            >div{
+                max-width: calc(100% - 20px);
+            }
+            >.el-form-item__error{
+                position: absolute;
+            }
+
+            .el-date-editor {
+                .el-range-separator {
+                    padding: 0;
+                }
+            }
+
+            .el-textarea {
+
+                &__inner {
+                    padding: 5px 10px;
+                }
+
+                .el-input__count {
+                    right: 20px;
+                    bottom: 1px;
+                }
+            }
+
+            .tong-select {
+                width: 100%;
+
+                .el-select__input{
+                    margin-left: 10px;
+                }
+            }
+
+            .el-checkbox-group,
+            .el-radio-group {
+                line-height: 1;
+            }
+
+            .el-radio,
+            .el-checkbox {
+                margin-right: 20px;
+                height: 30px;
+                line-height: 30px;
+
+                &__label {
+                    font-size: 12px;
+                }
+            }
+            .el-switch {
+                line-height: 30px;
+                height: 30px;
+            }
+        }
+
+        .tong-form-item-help {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            line-height: 14px;
+            transform: translate(5px,8px);
+            color: #A7A7A7;
+            font-size: 12px;
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                color: #333333;
+            }
+        }
+
+        .el-form-item__content .tong-form-item-help-font {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            transform: translate(6px, 8px);
+            border: 1px solid #A7A7A7;
+            color: #A7A7A7;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 12px;
+            font-size: 12px;
+            padding: 0 0 0 1px;
+            &:hover{
+                border-color: #333333;
+                color: #333333;
+            }
+        }
+
+        .tong-form-item.is-error {
+            padding-bottom: 16px;
+        }
+    }
+}
+
+.tong-form.label-hidden{
+    .el-form {
+        .el-form-item__label{
+            display: none;
+        }
+        .el-form-item__content{
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.tong-form-tips.is-light {
+    border: none;
+    box-shadow: 0 0 5px 2px rgba(0,0,0, .15);
+
+    .popper__arrow {
+        border-right-color: #f1f1f1;
+    }
+
+    .tong-tips-content {
+        font-size: 12px;
+        color: #545559;
+    }
+}
+
+.el-date-editor .el-range__icon {
+    font-size: 12px;
+    color: #545559;
+    line-height: 24px;
+}
+.el-date-editor .el-range-separator {
+    line-height: 23px;
+}

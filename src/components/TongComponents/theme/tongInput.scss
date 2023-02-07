@@ -1,0 +1,89 @@
+.tong-input{
+    .el-input__inner{
+
+    }
+}
+
+.tong-input-number{
+    display: inline-block;
+    .pre-text {
+        padding-right: 5px;
+        font-size: 12px;
+    }
+    .next-text {
+        padding-left: 5px;
+        font-size: 12px;
+    }
+}
+
+.el-input-number.is-controls-right .el-input__inner {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.el-autocomplete-suggestion {
+    border-radius: 2px;
+    .el-autocomplete-suggestion__wrap {
+        padding: 2px 1px;
+        border-radius: 2px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+    }
+}
+.el-autocomplete-suggestion li {
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+
+// 自定义提示
+.input-suggest {
+    position: relative;
+
+    .el-popover{
+        width: 100%;
+        padding: 2px;
+
+        .popper__arrow{
+            left: 30px!important;
+        }
+    }
+    
+    p.total{
+        margin: 0;
+        line-height: 22px;
+        text-align: right;
+        padding: 0 10px;
+        border-bottom: 1px solid #DBDADF;
+    }
+
+    ul{
+        min-height: 80px;
+        max-height: 240px;
+        overflow-y: auto;
+
+        li{
+            line-height: 30px;
+            padding: 0 10px;
+
+            &:hover{
+                background-color: #F5F7FA;
+                cursor: pointer;
+            }
+        }
+    }
+
+    p.no-data{
+        margin: 0;
+        padding: 0 10px;
+        line-height: 30px;
+        color: #999;
+    }
+    .el-loading-spinner{
+        margin-top: -10px;
+
+        .circular{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

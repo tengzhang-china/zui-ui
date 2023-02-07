@@ -1,0 +1,70 @@
+//主题颜色
+$primaryBg: #3A8CE2;            //主颜色
+$commonGreen: #69C04E;          //辅助颜色 - 绿色
+$commonGrey: #909599;           //辅助颜色 - 灰色
+$commonOrange: #E5A13C;         //辅助颜色 - 橘色
+$commonRed: #F56C6A ;           //辅助颜色 - 红色
+//字体颜色
+$titleColor: #282B33;           //标题字体颜色
+$fontColor: #333;               //正文字体颜色
+$contentColor: #545559;         //内容字体颜色
+$secondaryColor: #6C7280;       //次要文字字体颜色
+$placeholderColor: #9EA4B3;     //说明性文字字体颜色
+$disableColor: #B8BECC;         //禁用字体颜色
+$iconColor: #A7A7A7;            //常用图标颜色
+//链接颜色
+$linkColor: #3A8CE2;             //链接文字颜色
+$linkHoverColor: #58A1EE;        //链接文字滑入颜色
+$linkActiveColor: #2278D1;       //链接文字点击颜色
+$dangerColor: #F33B3B;           //表单常用文字颜色
+//边框颜色
+$borderBg: #DBDADF;              //边框常用颜色（表单边框）
+$lightBorderBg: #E6EBF5;         //浅色边框常用颜色（弹出框边框）
+$borderHoverBg: #C0C4CC;         //边框滑入颜色
+//背景颜色
+$titleGreyBg: #EEF2F5;           //常用标题背景颜色
+$hoverGreyBg: #F5F7FA;           //常用列表滑入颜色
+//frame（主题相关）
+$navBg: #071031;                      //首页顶部背景颜色
+$sideBarBg: #263151;                  //首页最左侧导航背景颜色
+$sideBarHoverBg: #161f40;             //首页最左侧导航滑入背景颜色
+$sideBarActiveBg: #161f40;            //首页最左侧导航选中背景颜色
+$sideBarMenuTitleBg: #D5DCE6;         //首页左侧导航树标题背景颜色
+$sideBarMenuBg: #E9ECF1;              //首页左侧导航树背景颜色
+$sideBarMenuHoverBg: #EEF2F5;         //首页左侧导航树滑入背景颜色
+$sideBarMenuActiveBg: #FFF;           //首页左侧导航树选中背景颜色
+//button
+$defaultHoverBg: #F0FAFD;        //默认按钮滑入背景颜色
+$defaultHoverColor: #31AAE4;     //默认按钮滑入字体颜色
+$defaultHoverBorder: #A5DAF4;    //默认按钮滑入边框颜色
+$defaultActiveBg: #F0FAFD;       //默认按钮点击背景颜色
+$defaultActiveColor: #1093D0;    //默认按钮点击字体颜色
+$defaultActiveBorder: #8BCAE9;   //默认按钮点击边框颜色
+$defaultDisabledBorder: #D5DCE6; //默认按钮禁用边框颜色
+$plainHoverBorder: #58A1EE;      //朴素按钮滑入边框颜色
+$plainActiveBorder: #2278D1;     //朴素按钮点击边框颜色
+$primaryHoverBg: #58A1EE;        //主要按钮滑入背景颜色
+$primaryActiveBg: #3A8CE2;       //主要按钮点击背景颜色
+$primaryDisabledBg: #87C2FF;     //主要按钮禁用边框颜色
+//alert
+$alertBg: #EBFAFD;               //alert组件背景颜色
+$alertBorder: #7ADEEE;           //alert组件边框颜色
+//tab
+$tabBg: #E6EBEF;                 //多便签页常用背景颜色
+$tabDarkBg: #C1C7CC;             //多便签页深色背景颜色
+$tabLightBg: #F7F8FA;            //多便签页浅色背景颜色
+//table
+$tableTitleBg: #EEF2F5;          //表格表头背景颜色
+$tableStripeBg: #FCFCFC;         //表格斑马线背景颜色
+$tableHoverBg: #EBF4FC;          //表格滑入行背景颜色
+$tableSelectBg: #F5F7FA;         //表格选中行背景颜色
+//tree
+$treeBg: #FAFAFA;                //树背景颜色
+$treeTitleBg: #FAFAFA;           //树标题背景颜色
+$treeHoverBg: #EEF2F5;           //树滑入行背景颜色
+$treeGroupTitleBg: #DBDADF;      //树分组标题背景颜色
+//tag
+$tagBg: #EFEFEF;                 //tag背景颜色
+$tagHoverBg: #D9EAF4;            //tag滑入背景颜色
+
+

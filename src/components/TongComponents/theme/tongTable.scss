@@ -1,0 +1,310 @@
+@mixin imgMixin {
+    img{
+        display: inline-block;
+        height: 14px;
+        padding: 0;
+        box-sizing: unset;
+        &.delete,&.moveUp,&.moveDown{
+            height: 20px;
+            padding: 2px 0;
+        }
+        &.add{
+            height: 20px;
+            padding: 1px 0;
+        }
+        &.position{
+            height: 22px;
+            padding: 0;
+        }
+
+        &.addNext,&.addBefore{
+            transform: translateY(2px);
+        }
+    }
+}
+
+.tong-table {
+    .el-table {
+        max-height: 100%!important;
+        p {margin: 0}
+        .el-table__header {
+            .cell {
+                padding-left: 0;
+                padding-right: 0;
+                line-height: 24px;
+                &.tong-red-star{
+                    display: flex;
+
+                    >div{
+                        width:100%
+                    }
+                    &::before{
+                        content: "*";
+                        color: #F56C6A;
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+            }
+            .no-filters .el-table__column-filter-trigger {
+                display: none;
+            }
+        }
+
+        .el-table__body {
+            td {
+                padding: 5px;
+                position: relative;
+                .cell {
+                    padding: 0;
+                    box-sizing: border-box;
+                    line-height: 24px;
+                    width: 100%!important;
+                    .cell-edit-label {
+                        max-width: calc(100% - 24px);
+                        display: inline-block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        vertical-align: bottom;
+                    }
+                }
+                .tong-error{
+                    // position: absolute;
+                    // bottom: 0;
+                    // margin: 0;
+                    // left: 5px;
+                    color: #F56C6A;
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+                .cell-edit-icon{
+                    margin-left: 9px;
+                    cursor: pointer;
+                    vertical-align: text-bottom;
+                    &+.cell-edit-icon{
+                        margin-left: 5px
+                    }
+                }
+                .el-input__inner {
+                    height: 24px;
+                    line-height: 24px;
+                }
+
+                .el-input-number.is-controls-right[style="width: 100px;"] {
+                    width: 100% !important;
+                }
+
+                .el-input-number.is-controls-right .el-input-number__decrease [class*=el-icon]{
+                    transform: translateY(2px) scale(.8);
+                }
+
+                .tong-select .el-select__tags .el-tag {
+                    height: 18px;
+                    line-height: 18px;
+                }
+
+                .el-date-editor,
+                .el-input__inner{
+                    width: 100%;
+                }
+
+                .el-radio{
+                    margin-right: 10px;
+                    .el-radio__label{
+                        font-size: 12px;
+                    }
+                }
+
+                .my-radio{
+                    text-align: center;
+                    margin-right: 0;
+                    .el-radio__label{
+                        display: none;
+                    }
+                }
+            }
+
+            .expand-hidden{
+                .cell>.el-table__expand-icon{
+                    display: none;
+                }
+            }
+        }
+
+        .el-table__fixed,.el-table__fixed-right{
+            height: calc(100%) !important;
+        }
+    }
+
+    .tong-table-operate-box p > span img.add {
+        padding: 2px 0 0 0;
+    }
+    .tong-table-operate-box p > span img.moveTop {
+        height: 20px;
+        padding-top: 2px;
+    }
+    .tong-table-operate-box p > span img.moveBottom {
+        height: 20px;
+        padding-top: 2px;
+    }
+    .tong-table-operate-box p > span img.position {
+        padding-top: 3px;
+    }
+
+    &-operate-box {
+        margin: 0;
+        display: flex;
+
+        p{
+            display: inherit;
+            margin: 0;
+
+            >span {
+                height: 24px;
+                line-height: 24px;
+                padding-right: 14px;
+                margin-right: 14px;
+                overflow: hidden;
+                position: relative;
+                @include imgMixin();
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    right: 0;
+                    height: 10px;
+                    width: 1px;
+                    background: #dbdadf;
+                }
+                &:last-child:after {
+                    display: none;
+                }
+                &:last-child {
+                    padding-right: 0;
+                    border-right: none;
+                }
+                .iconfont {font-size: 12px;}
+            }
+
+            >span:hover {
+                text-decoration: underline;
+            }
+
+            >span.operate-disabled {
+                cursor: auto;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .el-dropdown{
+            font-size: 12px;
+            > span {
+                line-height: 24px;
+            }
+        }
+    }
+
+    &-status-box {
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.tong-table-popover{
+    padding: 0;
+    &-content{
+        border:1px solid #EBEEF5;
+        margin: 5px;
+        p{
+            font-size: 12px;
+            margin: 0;
+            line-height: 25px;
+            min-width: 200px;
+            overflow-wrap: break-word;
+            padding: 0 10px;
+            margin-bottom: 3px;
+
+            >span:nth-of-type(1){
+                display: inline-block;
+                position: relative;
+                width: 70px;
+                text-align: right;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: #3474b8;
+                }
+            }
+        }
+
+        >div{
+            max-height: 240px;
+            overflow-y: auto;
+
+            p{
+                max-width: 230px;
+            }
+        }
+
+
+        .title{
+            line-height: 35px;
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            border-bottom:1px solid #EBEEF5;
+            background-color: #f0f0f0;
+        }
+    }
+}
+
+.tong-table-operate-dropdown{
+    li{
+        height: 28px;
+        @include imgMixin()
+    }
+}
+
+
+.el-table-filter {
+    .el-table-filter__bottom {
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        > button {
+            float: right;
+            padding: 3px;
+            border: 1px solid #DBDADF;
+            margin-left: 6px;
+            border-radius: 2px;
+        }
+    }
+}
+.el-checkbox-button__inner,
+.el-checkbox-group {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+}
+.el-checkbox__label {
+    font-size: 12px;
+}
+

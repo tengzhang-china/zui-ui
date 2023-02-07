@@ -1,0 +1,15 @@
+.tong-select-mode {
+  .el-popover {
+    padding: 0px;
+  }
+  .el-checkbox {
+    margin-bottom: 5px;
+  }
+  .el-checkbox__label {
+    font-size: 12px;
+    padding-left: 6px;
+  }
+  .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: #606266;
+  }
+}

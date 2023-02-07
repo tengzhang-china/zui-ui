@@ -1,0 +1,156 @@
+@import "mixin.scss";
+
+@for $i from 0 through 12{
+    .ml-#{$i} {
+        margin-left: $i*4px;
+    }
+    .mr-#{$i} {
+        margin-right: $i*4px;
+    }
+    .mt-#{$i} {
+        margin-top: $i*4px;
+    }
+    .mb-#{$i} {
+        margin-bottom: $i*4px;
+    }
+    .ma-#{$i} {
+        margin: $i*4px;
+    }
+    .mx-#{$i} {
+        margin-left: $i*4px;
+        margin-right: $i*4px;
+    }
+    .my-#{$i} {
+        margin-top: $i*4px;
+        margin-bottom: $i*4px;
+    }
+    .ml-n#{$i} {
+        margin-left: $i*-4px;
+    }
+    .mr-n#{$i} {
+        margin-right: $i*-4px;
+    }
+    .mt-n#{$i} {
+        margin-top: $i*-4px;
+    }
+    .mb-n#{$i} {
+        margin-bottom: $i*-4px;
+    }
+    .ma-n#{$i} {
+        margin: $i*-4px;
+    }
+    .mx-n#{$i} {
+        margin-left: $i*-4px;
+        margin-right: $i*-4px;
+    }
+    .my-n#{$i} {
+        margin-top: $i*-4px;
+        margin-bottom: $i*-4px;
+    }
+}
+@for $i from 0 through 12{
+    .pl-#{$i} {
+        padding-left: $i*4px;
+    }
+    .pr-#{$i} {
+        padding-right: $i*4px;
+    }
+    .pt-#{$i} {
+        padding-top: $i*4px;
+    }
+    .pb-#{$i} {
+        padding-bottom: $i*4px;
+    }
+    .pa-#{$i} {
+        padding: $i*4px;
+    }
+    .px-#{$i} {
+        padding-left: $i*4px;
+        padding-right: $i*4px;
+    }
+    .py-#{$i} {
+        padding-top: $i*4px;
+        padding-bottom: $i*4px;
+    }
+    .pl-n#{$i} {
+        padding-left: $i*-4px;
+    }
+    .pr-n#{$i} {
+        padding-right: $i*-4px;
+    }
+    .pt-n#{$i} {
+        padding-top: $i*-4px;
+    }
+    .pb-n#{$i} {
+        padding-bottom: $i*-4px;
+    }
+    .pa-n#{$i} {
+        padding: $i*-4px;
+    }
+    .px-n#{$i} {
+        padding-left: $i*-4px;
+        padding-right: $i*-4px;
+    }
+    .py-n#{$i} {
+        padding-top: $i*-4px;
+        padding-bottom: $i*-4px;
+    }
+}
+
+.clearfix {
+    @include clearfix;
+}
+.ellipsis {
+    @include ellipsis;
+}
+.scrollbar {
+    @include scrollbar;
+}
+
+/* 动画 */
+/* fade */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}
+
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+    transition: all .5s;
+}
+
+.fade-transform-enter {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+/* breadcrumb transition */
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+    transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.breadcrumb-move {
+    transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+    position: absolute;
+}

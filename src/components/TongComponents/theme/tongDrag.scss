@@ -1,0 +1,49 @@
+.tong-drag {
+    height: 300px;
+    position: relative;
+    .dragClass {
+        cursor: move;
+    }
+    .handle {
+        background: transparent;
+        border: none;
+        display: block !important;
+    }
+    .handle-tm, .handle-bm {
+        width: calc( 100% - 10px );
+        left: 10px;
+    }
+    .handle-ml, .handle-mr {
+        height: calc( 100% - 10px );
+        top: 10px;
+    }
+    .handle-tl, .handle-tr, .handle-bl, .handle-br {
+        width: 15px;
+        height: 15px;
+    }
+    .drag-title {
+        background: #d8dfe7;
+        height: 34px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: move;
+        span {
+            color: #4b4b4b;
+        }
+        .title-minimize {
+            position: absolute;
+            right: 40px;
+            cursor: pointer;
+        }
+        .title-maximize {
+            width: 10px;
+            height: 10px;
+            border: 2px solid #4b4b4b;
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>TongMap</title>
+     <link rel="stylesheet" href="../dist/TongMap.css">
+     <link rel="stylesheet" href="ol 5.3.0/ol.css" />
+     <style type="text/css">
+          html,
+          body,
+          html,
+          body {
+               margin: 0;
+               height: 100%;
+          }
+
+          #map {
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               width: 100%;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="map"></div>
+     <script src="../dist/TongMap.js"></script>
+     <script type="text/javascript">
+          var map = new ol.Map({
+               target: 'map',
+               layers: [
+                    new ol.layer.Tile({
+                         source: new TongMap.source.Tianditu({
+                              layerType: 'ter',
+                              key: '1d109683f4d84198e37a38c442d68311',
+                              projection: 'EPSG:4326'
+                         })
+                    }),
+                    new ol.layer.Tile({
+                         source: new TongMap.source.Tianditu({
+                              layerType: 'ter',
+                              key: '1d109683f4d84198e37a38c442d68311',
+                              isLabel: true,
+                              projection: 'EPSG:4326'
+                         })
+                    })
+               ],
+               view: new ol.View({
+                    center: ol.proj.fromLonLat([116.404, 39.915]),
+                    zoom: 10
+               }),
+          });
+          //zoom控件
+          var zoomControl = new ol.TongMap.control.Zoom();
+          map.addControl(zoomControl);
+          //zoomBar控件
+          map.addControl(new ol.TongMap.control.ScaleLine({}));
+     </script>
+
+
+</body>
+
+</html>

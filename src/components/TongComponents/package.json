@@ -1,0 +1,31 @@
+{
+    "name": "tong-zui-ui",
+    "version": "1.3.2",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "element-ui": "^2.13.2",
+        "jquery": "^3.4.1",
+        "vue-popperjs": "^2.3.0",
+        "vue2-ace-editor": "0.0.13",
+        "vue2-datepicker": "^2.12.0",
+        "vue-draggable-resizable": "^2.3.0",
+        "vuescroll": "^4.12.2",
+        "sql-formatter": "^2.3.3",
+        "echarts": "^4.2.1",
+        "echarts-wordcloud": "^1.1.3",
+        "echarts-stat": "^1.1.1",
+        "minio": "^7.0.12",
+        "x2js": "^3.4.0",
+        "wangeditor": "^4.5.4",
+        "mavon-editor": "^2.9.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "zhangteng520",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack-cli": "^4.8.0"
+    }
+}

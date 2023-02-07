@@ -1,0 +1,51 @@
+.tong-upload {
+     .el-upload-list__item:first-child{
+         margin-top: 0;
+     }
+    .tip{
+        line-height: 20px;
+        color: #9EA4B3;
+    }
+    .el-upload__text{
+        font-size: 14px;
+    }
+ }
+
+.tong-upload-cmp {
+    .ipTable {
+        display: inline-block;
+        color: #656567;
+        text-align: left;
+    }
+    .newTable tr {
+        height: 30px;
+        line-height: 30px;
+    }
+    .ipTable .trBg {
+        background: #f6f8fb;
+    }
+    .ipTable tr {
+        vertical-align: top;
+    }
+    .newTable td {
+        height: 30px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .ipTable tbody td {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 4px;
+        i {
+            margin-right: 7px;
+        }
+    }
+}
+.el-upload-list__item .el-icon-close {
+    top: 9px;
+    font-size: 14px;
+    color: #545559;
+}
+.el-upload-list__item .el-icon-close-tip {
+    top: 10px;
+}
+

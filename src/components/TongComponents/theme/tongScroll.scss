@@ -1,0 +1,52 @@
+.tong-scroll{
+    // overflow: inherit!important;
+    .__bar-is-vertical,.__bar-is-horizontal{
+        position: absolute;
+        cursor: auto!important;
+        &:hover{
+            background-color: #525252!important;
+        }
+    }
+    .__bar-is-vertical,.__bar-is-horizontal{
+        &::before{
+            content: "";
+            position: absolute;
+            width: calc(100% + 6px);
+            height: 100%;
+            left: -3px;
+            top: 0;            
+        }
+    }
+    .__bar-is-horizontal{
+        &::before{
+            content: "";
+            position: absolute;
+            height: calc(100% + 6px);
+            width: 100%;
+            top: -3px;
+            left: 0;            
+        }
+    }
+}
+.custom-scroll>.__panel>.__view{
+    min-width: calc(100% - 1px)!important;
+    width: calc(100% - 1px)!important;
+}
+.tong-table{
+    .scroll-box{
+        .el-table{
+            .el-table__fixed{
+                height: 100%!important;
+            }
+
+            .el-table__body-wrapper{
+                overflow-x: hidden;
+            }
+        }
+    }
+
+    .__rail-is-horizontal{
+        bottom: -2px!important;
+        z-index: 100!important;
+    }
+}

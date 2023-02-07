@@ -1,0 +1,100 @@
+.button-white {
+  display: inline-block;
+  color: #545558;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid #d5dce6;
+  border-radius: 2px;
+}
+
+.button-white span {
+  color: #545558;
+}
+
+.button-white:focus {
+  color: #00acde;
+  background-color: rgba(0, 172, 222, 0.1);
+}
+
+.button-white:focus span {
+  color: #00acde;
+}
+
+.button-white:hover {
+  color: #26a6e3;
+  background-color: rgba(0, 172, 222, 0.1);
+  border: solid 1px rgba(38, 166, 227, 0.55);
+}
+
+.button-white:hover span {
+  color: #26a6e3;
+}
+
+.button-white:active {
+  color: #008bcd;
+  background-color: rgba(0, 172, 222, 0.1);
+}
+
+.button-white:active span {
+  color: #008bcd;
+}
+
+.button-white.disabled {
+  background-color: #fafbfc;
+  color: #bbbfcc;
+  border: 1px solid #d5dce6;
+  cursor: no-drop;
+  pointer-events: none;
+}
+
+.button-white.disabled span {
+  color: #bbbfcc;
+}
+
+.button-blue {
+  display: inline-block;
+  color: #fff;
+  background-color: #0097de;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+}
+
+.button-blue span {
+  color: #fff;
+}
+
+.button-blue:focus {
+  background-color: #26a6e3;
+}
+
+.button-blue:focus span {
+  color: #fff;
+}
+
+.button-blue:hover {
+  background-color: #40b1e6;
+}
+
+.button-blue:hover span {
+  color: #fff;
+}
+
+.button-blue:active {
+  background-color: #008bcd;
+}
+
+.button-blue:active span {
+  color: #fff;
+}
+
+.button-blue.disabled {
+  border: none;
+  background-color: #80cbef;
+  cursor: no-drop;
+  pointer-events: none;
+}
+
+.button-blue.disabled span {
+  color: #fff;
+}

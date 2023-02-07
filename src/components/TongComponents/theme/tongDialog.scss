@@ -1,0 +1,100 @@
+.tong-dialog {
+  overflow: hidden;
+  &-content {
+    min-height: 125px;
+    overflow-y: auto;
+  }
+  &-align{
+    position: fixed;
+    display: flex;
+    .el-dialog{
+      margin: auto!important;
+    }
+  }
+  .el-dialog {
+    position: relative;
+    border-radius: 5px;
+  }
+  .el-dialog__header {
+    padding: 0;
+
+    > div {
+      padding: 10px 15px;
+      height: 50px;
+      line-height: 30px;
+      box-sizing: border-box;
+
+      > span {
+        font-size: 16px;
+      }
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 15px;
+      font-size: 20px;
+      right: 10px;
+      color: #333;
+      cursor: pointer;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .el-dialog__body {
+    box-sizing: border-box;
+    padding: 10px 16px;
+    overflow: auto;
+  }
+  .el-dialog__footer {
+    padding: 0;
+  }
+  .dialog-footer {
+    padding: 10px 15px;
+    span.drag-icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      cursor: nw-resize;
+      background-color: transparent;
+      border-bottom-right-radius: 3px;
+    }
+
+    .el-button {
+      height: 28px;
+      padding: 0 24px;
+      line-height: 26px;
+    }
+  }
+}
+
+.dialog-fade-enter-active .el-dialog.way {
+    animation: anim-open 0.3s;
+  }
+  .dialog-fade-leave-active .el-dialog.way {
+    animation: anim-close 0.3s;
+  }
+  @keyframes anim-open {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes anim-close {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>TongMap</title>
+     <link rel="stylesheet" href="../dist/TongMap.css">
+     <link rel="stylesheet" href="ol 5.3.0/ol.css" />
+     <style type="text/css">
+          html,
+          body,
+          html,
+          body {
+               margin: 0;
+               height: 100%;
+          }
+
+          #map {
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               width: 100%;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="map"></div>
+     <script src="ol 5.3.0/ol.js"></script>
+     <script src="../dist/TongMap.js"></script>
+     <script type="text/javascript">
+         var map = new ol.Map({
+               target: 'map',
+               layers: [
+                    new ol.layer.Group({
+                         title: 'Base maps',
+                         layers: [
+                              new ol.layer.Group({
+                                   title: 'Water color with labels',
+                                   type: 'base',
+                                   combine: true,
+                                   visible: false,
+                                   layers: [
+                                        new ol.layer.Tile({
+                                             source: new ol.source.Stamen({
+                                                  layer: 'watercolor'
+                                             })
+                                        }),
+                                        new ol.layer.Tile({
+                                             source: new ol.source.Stamen({
+                                                  layer: 'terrain-labels'
+                                             })
+                                        })
+                                   ]
+                              }),
+                              new ol.layer.Tile({
+                                   title: 'Water color',
+                                   type: 'base',
+                                   visible: false,
+                                   source: new ol.source.Stamen({
+                                        layer: 'watercolor'
+                                   })
+                              }),
+                              new ol.layer.Tile({
+                                   title: '高德',
+                                   type: 'base',
+                                   visible: true,
+                                   source: new ol.source.XYZ({
+                                        url: 'http://wprd0{1-4}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&style=7&x={x}&y={y}&z={z}'
+                                   })
+                              })
+                         ]
+                    }),
+                    new ol.layer.Group({
+                         title: 'Overlays',
+                         fold: 'open',
+                         layers: [
+                              new ol.layer.Image({
+                                   title: 'Countries',
+                                   source: new ol.source.ImageArcGISRest({
+                                        ratio: 1,
+                                        params: {
+                                             LAYERS: 'show:0'
+                                        },
+                                        url: 'https://ons-inspire.esriuk.com/arcgis/rest/services/Administrative_Boundaries/Countries_December_2016_Boundaries/MapServer'
+                                   })
+                              })
+
+                         ]
+                    })
+               ],
+               view: new ol.View({
+                    center: ol.proj.transform([-0.92, 52.96], 'EPSG:4326', 'EPSG:3857'),
+                    zoom: 6
+               })
+          });
+
+          var layerSwitcher = new ol.TongMap.control.LayerSwitcher({
+               activationMode: 'click',
+               tipLabel: '', // 鼠标移入展示提示，默认不传值得情况下是“图层透明度”
+               groupSelectStyle: 'none' // Can be 'children' [default], 'group' or 'none'
+          });
+          map.addControl(layerSwitcher);
+     </script>
+
+
+</body>
+
+</html>

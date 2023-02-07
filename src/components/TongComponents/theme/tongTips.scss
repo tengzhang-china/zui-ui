@@ -1,0 +1,42 @@
+.tong-tips-meta{
+    transition: all .7s;
+    word-break: break-all;
+    color:#fff;
+    font-size: 12px;
+    line-height: 1.2;
+    opacity: .82;
+    padding: 5px;
+    z-index: 99999999;
+    
+    &::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        left: 50%;
+        transform: translate(-50%);
+        opacity: .82;
+    }
+}
+
+.tong-tips-meta.top{
+    &::after{
+        border-top-color:#303133;
+        bottom: -12px;
+        opacity: .82;
+    }
+}
+.tong-tips-meta.bottom{
+    &::after{
+        border-bottom-color: #303133;
+        top: -12px;
+        opacity: .82;
+    }
+}
+
+.tong-tips{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

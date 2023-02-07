@@ -1,0 +1,93 @@
+.tong-search{
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    >input{
+        border: none;
+        width: 0;
+        height: 0;
+        padding: 0;
+    }
+
+    .custom-button {
+        margin-right: auto;
+        white-space: nowrap;
+        button {
+            margin-right: 6px;
+        }
+        .tong-icon-none {
+            padding: 8px 24px;
+        }
+    }
+
+    .custom-form {
+        display: flex;
+        width: 0;
+        flex-grow: 1;
+        justify-content: flex-end;
+
+        .selector {
+            width: 120px;
+        }
+        .text_input {
+            display: inline-block;
+            max-width: 360px;
+            width: 0;
+            flex-grow: 1;
+        }
+        .selector_input {
+            display: inline-block;
+            width: 360px;
+            overflow: hidden;
+        }
+        .date_picker {
+            display: inline-block;
+            width: 360px;
+        }
+
+        .tong-search-btn {
+            display: inline-block;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            margin-left: 6px;
+            font-size: 12px;
+            overflow: hidden;
+        }
+
+        .el-input__inner {
+            border-radius: 0;
+        }
+        > div:hover, .is-focus {
+            position: relative;
+            transition: all .8s;
+            z-index: 1;
+        }
+
+        .el-input-group__append {
+            border-radius: 0;
+        }
+
+        .date_picker{
+            .el-range-editor.el-input__inner,.el-date-editor{
+                width: 100%;
+            }
+            .el-date-editor .el-range-separator {
+                padding: 0 14px;
+            }
+        }
+
+        .selector_input .el-cascader{
+            width: 100%;
+        }
+    }
+
+}
+.el-popper.tong-search-menu-none {
+    display: none;
+    * {display: none}
+    .popper__arrow::after {
+        display: none;
+    }
+}

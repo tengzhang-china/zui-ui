@@ -1,0 +1,38 @@
+$successColor:#69C04E;
+$warningColor:#E5A13C;
+$errorColor:#F56C6A;
+
+//操作栏
+$colorList:(
+    ("operate-blue",#3A8CE2,#589ee6),     //blue
+    ("operate-disabled",#B8BECC,#B8BECC), //禁用
+    ("status-no-deployed",#5d8ea5), //未部署
+    ("status-changed",#4cad21),//已变更
+    ("status-unchanged",#5d8ea5),//未变更
+    ("status-draft",#5a75db),//草稿
+    ("status-cancelled",#5d8ea5),//已取消
+    ("status-rejected",#e26337), //已拒绝
+    ("status-on_approving",#14bd87),//审批中
+    ("status-to_approve",#ea6767),
+    ("status-recall",#545558),
+    ("status-green_right",#27c16b),
+    ("status-frozen",#e98829),
+    ("status-open",#27c16b),
+    ("status-stop",#ea6767),
+    ("status-un_deploying",#86ca67),
+    ("status-deployed",#8195a7),
+    ("status-done",#35c474),
+    ("status-warning",#e98829),
+    ("status-no_passed",#eb6767),
+    ("status-run",#86ca67),
+
+);
+@each $name,$value,$active in $colorList{
+    .#{$name}{
+        color: #{$value};
+
+        &:hover{
+            color: #{$active}
+        }
+    }
+}
