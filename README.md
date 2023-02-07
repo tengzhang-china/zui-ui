@@ -1,29 +1,26 @@
-# vue_before_use
+## zui-ui 组件库
 
-## Project setup
+* 组件目录 src/components/tongComponents
+
+### 发布私服
+```
+npm run publish
+```
+
+
+## zui-ui 帮助文档
+
+### 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 构建文档
 ```
 npm run build
 ```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -37,8 +37,8 @@ const cdn = {
 
 
 module.exports = {
-    outputDir: 'dist',
-
+    outputDir: 'docs',
+    publicPath:"/zui-ui/",
     assetsDir: 'static',
     lintOnSave: false,
     productionSourceMap: false,

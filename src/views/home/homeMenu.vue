@@ -2,7 +2,7 @@
   <div class="home-menu">
     <div class="title">
       <tong-icon v-if="false" :imgUrl="logoIcon" />
-      <img src="../../../public/static/logo.png" alt="" />
+      <!-- <img src="../../../public/static/logo.png" alt="" /> -->
       <span>Tong组件库</span>
     </div>
 
